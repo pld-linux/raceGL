@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=raceGL
+Name[pl]=raceGL
+Comment=OpenGL Racing Game
+Comment[pl]=Wy¶cigi w OpenGL
+Icon=raceGL.png
+Exec=raceGL
+Terminal=0
+Type=Application
+
+# vi: encoding=utf-8
