@@ -89,4 +89,4 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_gamedata}/sea
 %dir %{_gamedata}/sounds
 %{_applnkdir}/Games/Racing/*.desktop
-#%{_pixmapsdir}/*
+#%%{_pixmapsdir}/*
