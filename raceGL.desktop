@@ -2,7 +2,7 @@
 Name=raceGL
 Name[pl]=raceGL
 Comment=OpenGL Racing Game
-Comment[pl]=Wy¶cigi w OpenGL
+Comment[pl]=Wyścigi w OpenGL
 Icon=raceGL.png
 Exec=raceGL
 Terminal=false
