@@ -1,14 +1,15 @@
 # TODO:
-# - some icon and desktop-file
+# - some icon
 %define		_origname	race
 Summary:	OpenGL Racing Game
 Summary(pl):	Gra wy¶cigowa w OpenGL
 Name:		raceGL
 Version:	0.5
-Release:	1
+Release:	2
 License:	GPL v2
 Group:		X11/Applications/Games
 Source0:	ftp://users.freebsd.org.uk/pub/foobar2k/%{_origname}-%{version}.tar.bz2
+Source1:	%{name}.desktop
 URL:		http://projectz.ath.cx/?id=70
 BuildRequires:	OpenGL-devel
 BuildRequires:	SDL-devel
@@ -44,6 +45,7 @@ d¼wiêk.
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_gamedata}/{all,desert,models,music,sea,sounds}}
+install -d $RPM_BUILD_ROOT%{_applnkdir}/Games/Racing
 
 install %{_origname}	$RPM_BUILD_ROOT%{_datadir}/%{name}/
 install config		$RPM_BUILD_ROOT%{_datadir}/%{name}/
@@ -61,6 +63,8 @@ cat > $RPM_BUILD_ROOT%{_bindir}/%{name} << EOF
 cd %{_datadir}/%{name}/
 ./%{_origname}
 EOF
+
+install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Games/Racing
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -85,5 +89,5 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_gamedata}/music
 %dir %{_gamedata}/sea
 %dir %{_gamedata}/sounds
-#%{_applnkdir}/Games/*
+%{_applnkdir}/Games/Racing/*.desktop
 #%{_pixmapsdir}/*
