@@ -13,6 +13,7 @@ Release:	3
 License:	GPL v2
 Group:		X11/Applications/Games
 Source0:	ftp://users.freebsd.org.uk/pub/foobar2k/%{_origname}-%{version}.tar.bz2
+# Source0-md5:	9f6efbe1b1a7969a9e8d718d691b4095
 Source1:	%{name}.desktop
 URL:		http://projectz.ath.cx/?id=70
 BuildRequires:	OpenGL-devel
