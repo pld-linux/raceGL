@@ -1,11 +1,15 @@
 # TODO:
 # - some icon
+#
+# Conditional build:
+# _with_ra	- build in PLD Ra environment
+
 %define		_origname	race
 Summary:	OpenGL Racing Game
 Summary(pl):	Gra wy¶cigowa w OpenGL
 Name:		raceGL
 Version:	0.5
-Release:	2
+Release:	3
 License:	GPL v2
 Group:		X11/Applications/Games
 Source0:	ftp://users.freebsd.org.uk/pub/foobar2k/%{_origname}-%{version}.tar.bz2
@@ -20,6 +24,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_noautoreqdep	libGL.so.1 libGLU.so.1
 
+%if %{?_with_ra:1}%{!?_with_ra:0}
+%define		_prefix		/usr/X11R6
+%endif
 %define		_gamedata	%{_datadir}/%{name}/data/
 
 %description
@@ -39,7 +46,7 @@ d¼wiêk.
 %setup -q -n %{_origname}-%{version}
 
 %build
-%{__make}
+%{__make} CC="%{__cc} %{rpmcflags} -I%{_includedir}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
