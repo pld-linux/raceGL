@@ -81,13 +81,13 @@ rm -rf $RPM_BUILD_ROOT
 %doc README
 %attr(755,root,root) %{_bindir}/*
 %attr(755,root,root) %{_datadir}/%{name}/%{_origname}
-%attr(644,root,root) %config(noreplace) %{_datadir}/%{name}/config
-%attr(644,root,root) %{_gamedata}/all/*
-%attr(644,root,root) %{_gamedata}/desert/*
-%attr(644,root,root) %{_gamedata}/models/*
-%attr(644,root,root) %{_gamedata}/music/*
-%attr(644,root,root) %{_gamedata}/sea/*
-%attr(644,root,root) %{_gamedata}/sounds/*
+%config(noreplace) %{_datadir}/%{name}/config
+%{_gamedata}/all/*
+%{_gamedata}/desert/*
+%{_gamedata}/models/*
+%{_gamedata}/music/*
+%{_gamedata}/sea/*
+%{_gamedata}/sounds/*
 %dir %{_datadir}/%{name}
 %dir %{_gamedata}
 %dir %{_gamedata}/all
