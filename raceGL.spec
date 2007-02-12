@@ -6,7 +6,7 @@
 
 %define		_origname	race
 Summary:	OpenGL Racing Game
-Summary(pl.UTF-8):   Gra wyścigowa w OpenGL
+Summary(pl.UTF-8):	Gra wyścigowa w OpenGL
 Name:		raceGL
 Version:	0.5
 Release:	3
