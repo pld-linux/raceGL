@@ -6,7 +6,7 @@
 
 %define		_origname	race
 Summary:	OpenGL Racing Game
-Summary(pl):	Gra wy¶cigowa w OpenGL
+Summary(pl.UTF-8):   Gra wyÅ›cigowa w OpenGL
 Name:		raceGL
 Version:	0.5
 Release:	3
@@ -36,12 +36,12 @@ using OpenGL. You can race round and round to your heart's desire.
 Features include Heightfield map loading, texture mapping, a
 speedometer, a translucent radar map, a timer, music, sound.
 
-%description -l pl
-OpenGL Racing Game jest gr± w stylu Star Wars: Racer napisan± w
-czystym C przy u¿yciu OpenGL. Mo¿esz je¼dziæ sobie w kó³ko ile ci siê
+%description -l pl.UTF-8
+OpenGL Racing Game jest grÄ… w stylu Star Wars: Racer napisanÄ… w
+czystym C przy uÅ¼yciu OpenGL. MoÅ¼esz jeÅºdziÄ‡ sobie w kÃ³Å‚ko ile ci siÄ™
 podoba. Cechy: Heightfield map loading, mapowanie tekstur,
-prêdko¶ciomierz, przezroczysta mapa radarowa, czasomierz, muzyka,
-d¼wiêk.
+prÄ™dkoÅ›ciomierz, przezroczysta mapa radarowa, czasomierz, muzyka,
+dÅºwiÄ™k.
 
 %prep
 %setup -q -n %{_origname}-%{version}
