@@ -51,8 +51,7 @@ dźwięk.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_gamedata}/{all,desert,models,music,sea,sounds}}
-install -d $RPM_BUILD_ROOT%{_applnkdir}/Games/Racing
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_gamedata}/{all,desert,models,music,sea,sounds},%{_desktopdir}}
 
 install %{_origname}	$RPM_BUILD_ROOT%{_datadir}/%{name}/
 install config		$RPM_BUILD_ROOT%{_datadir}/%{name}/
@@ -71,7 +70,7 @@ cd %{_datadir}/%{name}/
 ./%{_origname}
 EOF
 
-install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/Games/Racing
+install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}/
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -96,5 +95,5 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_gamedata}/music
 %dir %{_gamedata}/sea
 %dir %{_gamedata}/sounds
-%{_applnkdir}/Games/Racing/*.desktop
+%{_desktopdir}/*
 #%%{_pixmapsdir}/*
