@@ -5,7 +5,7 @@ Summary:	OpenGL Racing Game
 Summary(pl.UTF-8):	Gra wyścigowa w OpenGL
 Name:		raceGL
 Version:	0.5
-Release:	3
+Release:	4
 License:	GPL v2
 Group:		X11/Applications/Games
 Source0:	ftp://users.freebsd.org.uk/pub/foobar2k/%{origname}-%{version}.tar.bz2
@@ -64,6 +64,7 @@ cd %{_datadir}/%{name}
 EOF
 
 install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
+install race $RPM_BUILD_ROOT%{_libdir}/%{name}/%{origname}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
