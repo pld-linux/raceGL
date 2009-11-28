@@ -13,6 +13,7 @@ Source0:	ftp://users.freebsd.org.uk/pub/foobar2k/%{origname}-%{version}.tar.bz2
 Source1:	%{name}.desktop
 URL:		http://projectz.ath.cx/?id=70
 BuildRequires:	OpenGL-devel
+BuildRequires:	OpenGL-GLU-devel
 BuildRequires:	SDL-devel
 BuildRequires:	SDL_image-devel
 BuildRequires:	SDL_mixer-devel
